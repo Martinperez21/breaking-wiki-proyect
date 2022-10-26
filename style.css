@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400&display=swap');
+
+body{
+    background-color: #032202;
+    font-family: 'Hind Siliguri', sans-serif;
+}   
+.image-bk{
+    
+    background-image:linear-gradient(rgba(0, 0, 0, 0.542), rgba(0, 0, 0, 0.568)), url(public/img/BK-image.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+/* NAVBAR */
+.navbar-dark, .bg-dark, .btn-dark, .card-body, .card-footer {
+    background-color: rgb(10, 10, 10);
+}
+.bkw-Logo{
+    width: 50px;
+}
+.font-bk{
+    font-family: 'Heart Breaking Bad', sans-serif;
+}
+.navbar-brand{
+    font-size: 30px;
+    font-family: 'Heart Breaking Bad', sans-serif;
+}
+
+.nav-link {
+ color: rgb(41, 119, 62); 
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+
+.img-size{
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+
+.card{
+    transition: all 0.2s ease;
+}
+.card:hover{
+    transition: 90ms;
+    transform: scale(1.05);
+    box-shadow: rgba(43, 102, 58, 0.525) 0px 0px 60px;
+}
+
+.page-link{
+    border: none;
+    color:white;
+    background-color: rgb(27, 81, 41);
+}
+
+.page-link:hover, .page.item:hover, pagination:hover{
+    
+    border: none;
+    color:rgb(41, 119, 62);
+    background-color:rgb(10, 10, 10);
+}
