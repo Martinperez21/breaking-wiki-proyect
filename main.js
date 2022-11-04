@@ -42,3 +42,5 @@ request.onload = function () {
     footer.appendChild(portrayed);
   });
 }
+
+request.send();
