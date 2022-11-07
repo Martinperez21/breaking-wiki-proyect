@@ -56,7 +56,18 @@
   <div class="container font-bk text-white text-center mt-4 mb-4">
     <h1 class="display-1 lead">Personajes</h1>
   </div>
-  <div id="container" style="width: 18rem;"></div>
+  <div class="container">
+    <div id="output" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5">
+    </div>
+  </div>
+
+  <!-- Spinner loader -->
+  <div class="d-flex justify-content-center">
+    <div id="spinner" class="spinner-border text-white mt-4" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  
   <!-- Footer / Pagination -->
   <div class="container-fluid">
     <nav class="mt-5" aria-label="Navegacion de pagina">
