@@ -1,35 +1,51 @@
-const request = new XMLHttpRequest();
-request.open('GET', 'https://www.breakingbadapi.com/api/episodes?series=Breaking+Bad', true);
+const spinner = document.querySelector("#spinner");
+function fetch_episodes() {
+    fetch('https://www.breakingbadapi.com/api/episodes?series=Breaking+Bad')
+      .then(function(res){
+        return res.json();
+      })
+      .then(function(data) {
+        // This is an array so we have to loop through it
+        let output = '';
+        spinner.style.display = "none";
+        data.forEach(function(episode){
+          output += `
+        <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+          <div class="card mb-4 bg-dark text-white ">
+            <img src="../public/img/Breaking-Wiki.png" class="card-img-top img-size" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${episode.title}</h5>
+              <p class="card-text">EP: ${episode.episode}</p>
+              <p class="card-text">${episode.air_date}</p>
+            </div>
 
-request.onload = function () {
-    const data = JSON.parse(this.response);
+            <div class="card-footer">
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-${episode.episode_id}" aria-expanded="false" aria-controls="collapseExample">
+                Informacion
+              </button>
+            </div>
+          </div>
 
-    const container = document.getElementById('container');
-    container.setAttribute('class', 'container my-5');
+            <div class="collapse my-3" id="flush-${episode.episode_id}">
+              <div class="card card-body text-white">
+                <p class="card-text">Temporada: ${episode.season}</p>
+                <p class="card-text">Fecha de emisión:<br>${episode.air_date}</p>
+                <p class="card-text">Personajes Principales:<br> "${episode.characters}"</p>
+              </div>
+            </div>  
 
-    data.forEach((episodes) => {
-        const row = document.createElement('div');
-        row.setAttribute('class', 'row row-cols-1 row-cols-md-2 row-cols-sm-2 row-cols-lg-4 g-4');
-        const col = document.createElement('div');
-        col.setAttribute('class', 'col');
-        const div = document.createElement('div');
-        div.setAttribute('class', 'card bg-dark text-white h-100');
-        const divBody = document.createElement('div');
-        divBody.setAttribute('class', 'card-body');
-        const info = document.createElement('h5');
-        info.setAttribute('class', 'card-title');
-        info.textContent = "Temporada " + episodes.season + " Episodio " + episodes.episode + " " + episodes.title;
-        const date = document.createElement('p');
-        date.setAttribute('class', 'card-text');
-        date.textContent = "Fecha de emision: " + episodes.air_date;
-
-        container.appendChild(row);
-        container.appendChild(col);
-        col.appendChild(div);
-        div.appendChild(divBody);
-        divBody.appendChild(info);
-        divBody.appendChild(date);
-        // console.log(episodes);
-    });
-}
-request.send();
+          
+        </div>
+          `;
+        });
+        document.getElementById('output').innerHTML = output; 
+  
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+  }
+  
+  fetch_episodes();
+  
+  
