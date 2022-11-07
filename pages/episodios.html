@@ -52,13 +52,38 @@
       </div>
     </div>
   </nav>
-
-  <!-- TARJETAS EP -->
+  
+  <!-- Episodios tarjeta -->
   <div class="container font-bk text-white text-center mt-4 mb-4">
-    <h1 class="display-1 ">Episodios</h1>
+    <h1 class="display-1 lead">Episodios</h1>
   </div>
-  <div id="container" style="width: 18rem;">
+
+  <div class="container">
+    <div id="output" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 "></div>
   </div>
+
+  <!-- Spinner loader -->
+  <div class="d-flex justify-content-center">
+    <div id="spinner" class="spinner-border text-white mt-4" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+
+  <!-- Footer / Pagination -->
+  <div class="container-fluid">
+    <nav class="mt-5" aria-label="Navegacion de pagina">
+      <ul class="pagination justify-content-center">
+        <li class="page-item me-2"><a class="page-link rounded" href="#"> << </a></li>
+        <li class="page-item me-2"><a class="page-link rounded" href="#">1</a></li>
+        <li class="page-item me-2"><a class="page-link rounded" href="#">2</a></li>
+        <li class="page-item me-2"><a class="page-link rounded" href="#">3</a></li>
+        <li class="page-item me-2"><a class="page-link rounded" href="#">4</a></li>
+        <li class="page-item me-2"><a class="page-link rounded" href="#">5</a></li>
+        <li class="page-itemW"><a class="page-link rounded" href="#"> >> </a></li>
+      </ul>
+    </nav>
+  </div>  
+  
   <!-- SCRIPT -->
   <script src="../episodes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
