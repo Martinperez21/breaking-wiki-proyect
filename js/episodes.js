@@ -12,7 +12,7 @@ function fetch_episodes() {
           output += `
         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
           <div class="card mb-4 bg-dark text-white ">
-            <img src="../img/Breaking-Wiki.png" class="card-img-top img-size" alt="...">
+            <img src="../public/img/Breaking-Wiki.png" class="card-img-top img-size" alt="...">
             <div class="card-body">
               <h5 class="card-title">${episode.title}</h5>
               <p class="card-text">EP: ${episode.episode}</p>

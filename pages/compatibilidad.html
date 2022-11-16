@@ -45,14 +45,90 @@
             <a class="nav-link active" href="compatibilidad.html">Compatibilidad</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
 
-</body>
+    <div class="container-fluid align-content-center text-white ">
+      <div class="container my-4 text-center">      
+        <h1 class="font-bk display-1">Compatibilidad</h1>
+        <p class="fst-italic text-secondary">"Compatibilidad random de personajes"</p>
+      </div>
+  
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 my-2">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top img-size-comp" >
+                  <div class="card-body">
+                    <h1 class="card-title" id="nombre"></h5>
+                    <p class="card-text" id="actor"></p>
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top img-size-comp"  id="imagen">
+                  <div class="card-body">
+                    <h1 class="card-title text-light" id="name"></h5>
+                    <p class="card-text text-light" id="portrayed"></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+        <div class="container text-center titulo d-none mt-3 mb-5">
+            <h2>Compatibilidad amorosa:</h2>
+            <h2 id="valorcomp"></h2>
+            <div class="progress my-4">
+              <div class="progress-bar " aria-valuemin="0" aria-valuemax="100" id="progress-bar" ></div>
+            </div>
+            <div class="value">
+              <p class="card-text text-light" id="valorcomp"></p>
+            </div>
+            <div class="frase mt-5 mb-3 fst-italic text-secondary">
+              <h5 id="frase-comp"></h5>
+            </div>
+            <input type="button" value="Volver a probar" onclick="location.reload()" class="btn btn-success">
+        </div>
 
+        <!-- Spinner Loader -->
+        <div class="spinner d-flex justify-content-center">
+          <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+    </div>
+
+    
+    <!-- Footer -->
+  <footer>
+    <div class="container py-4">
+      <nav class="row">
+        <ul class="nav justify-content-center p-4 mb-4 fs-5">
+          <li class="nav-item">
+            <a href="https://github.com/Martinperez21" class="nav-link mx-3">
+              Martinperez21 | Github
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="https://github.com/scott1ee" class="nav-link mx-3">
+              scott1ee | Github
+            </a>
+          </li>
+        </ul>
+        <p class="text-center mt-2  fs-5 text-white">Made by <br> Perez Martin & Franco Herrera</p>
+      </nav>
+    </div>
+  </footer> 
+
+  <!-- Script -->
+  <script src="../js/compatibilidad.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+  crossorigin="anonymous"></script>
+ </body>
 </html>

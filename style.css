@@ -4,12 +4,39 @@ body {
     background-color: #032202;
     font-family: 'Hind Siliguri', sans-serif;
 }
-
+footer{
+    background-color: rgb(10, 10, 10);
+}
 @font-face {
     font-family: 'Heart Breaking Bad';
     font-style: normal;
     font-weight: 400;
     src: local('Heart Breaking Bad'), url('https://fonts.cdnfonts.com/s/67301/Heart Breaking Bad.woff') format('woff');
+}
+
+.background-movement {
+    background: linear-gradient(181deg, #032202, #0c210b, #023f00, #035600);
+    background-size: 800% 800%;
+
+    -webkit-animation: bk-background 11s ease infinite;
+    -o-animation: bk-background 11s ease infinite;
+    animation: bk-background 11s ease infinite;
+}
+
+@-webkit-keyframes bk-background {
+    0%{background-position:0% 58%}
+    50%{background-position:100% 43%}
+    100%{background-position:0% 58%}
+}
+@-o-keyframes bk-background {
+    0%{background-position:0% 58%}
+    50%{background-position:100% 43%}
+    100%{background-position:0% 58%}
+}
+@keyframes bk-background {
+    0%{background-position:0% 58%}
+    50%{background-position:100% 43%}
+    100%{background-position:0% 58%}
 }
 
 .image-bk {
@@ -57,7 +84,12 @@ body {
     object-fit: cover;
     object-position: 50% 0%;
 }
+.img-size-comp {
 
+    height: 600px;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
 
 .card {
     transition: all 0.2s ease;
@@ -82,4 +114,8 @@ pagination:hover {
     border: none;
     color: rgb(41, 119, 62);
     background-color: rgb(10, 10, 10);
+}
+.progress-bar{
+    border: none;
+    background-color: #00b209;
 }
