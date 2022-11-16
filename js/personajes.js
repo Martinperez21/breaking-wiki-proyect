@@ -25,6 +25,12 @@ function disabled(){
   else{
     pre.disabled = false;
   }
+  if(limit == 8){
+    pre.disabled = true;
+  }
+  else{
+    pre.disabled = false;
+  }
 }
 function fetch_characters() {
   fetch(`https://www.breakingbadapi.com/api/characters?limit=${limit}&offset=${offset}`)
