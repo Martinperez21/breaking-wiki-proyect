@@ -6,17 +6,26 @@ let limit = 8
 let offset = 0
 
 next.addEventListener("click", () => {
-    limit += 8  
+    limit += 8
+    disabled(limit) 
     fetch_characters(limit, offset)
 });
 
 pre.addEventListener("click", () =>  {
    if(limit != 1) {
        limit -= 8
+       disabled(limit)
        fetch_characters(limit, offset)
    } 
 });
-
+function disabled(){
+  if(limit == 8){
+    pre.disabled = true;
+  }
+  else{
+    pre.disabled = false;
+  }
+}
 function fetch_characters() {
   fetch(`https://www.breakingbadapi.com/api/characters?limit=${limit}&offset=${offset}`)
     .then(function(res){
@@ -67,5 +76,5 @@ function fetch_characters() {
 }
 
 fetch_characters(limit, offset);
-
+disabled(limit);
 
