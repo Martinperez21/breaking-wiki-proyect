@@ -1,7 +1,24 @@
 const spinner = document.querySelector("#spinner");
+const pre = document.getElementById("prev");
+const next = document.getElementById("next");
+
+let limit = 8 
+let offset = 0
+
+next.addEventListener("click", () => {
+    limit += 8  
+    fetch_characters(limit, offset)
+});
+
+pre.addEventListener("click", () =>  {
+   if(limit != 1) {
+       limit -= 8
+       fetch_characters(limit, offset)
+   } 
+});
 
 function fetch_characters() {
-  fetch('https://www.breakingbadapi.com/api/characters ')
+  fetch(`https://www.breakingbadapi.com/api/characters?limit=${limit}&offset=${offset}`)
     .then(function(res){
       return res.json();
     })
@@ -49,6 +66,6 @@ function fetch_characters() {
     });
 }
 
-fetch_characters();
+fetch_characters(limit, offset);
 
 

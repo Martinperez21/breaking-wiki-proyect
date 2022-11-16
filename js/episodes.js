@@ -1,6 +1,26 @@
 const spinner = document.querySelector("#spinner");
+const pre = document.getElementById("prev");
+const next = document.getElementById("next");
+
+/* 
+Intento de utilizar limit, offset como en personajes, no funciono
+let limit = 8 
+let offset = 0
+
+next.addEventListener("click", () => {
+    limit += 8  
+    fetch_episodes(limit, offset)
+});
+
+pre.addEventListener("click", () =>  {
+   if(limit != 1) {
+       limit -= 8
+       fetch_episodes(limit, offset)
+   } 
+});
+ */
 function fetch_episodes() {
-    fetch('https://www.breakingbadapi.com/api/episodes?series=Breaking+Bad')
+    fetch(`https://www.breakingbadapi.com/api/episodes?series=Breaking+Bad`)
       .then(function(res){
         return res.json();
       })
@@ -46,6 +66,6 @@ function fetch_episodes() {
       });
   }
   
-  fetch_episodes();
+fetch_episodes(/* limit, offset */);
   
   
