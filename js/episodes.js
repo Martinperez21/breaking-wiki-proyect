@@ -37,7 +37,8 @@ function fetch_episodes() {
             <img src="../public/img/Breaking-Wiki.png" class="card-img-top img-size" alt="...">
             <div class="card-body">
               <h5 class="card-title">${episode.title}</h5>
-              <p class="card-text">EP: ${episode.episode}</p>
+              <p class="card-text">Temporada: ${episode.season}</p>
+              <p class="card-text">Ep: ${episode.episode}</p>
               <p class="card-text">${episode.air_date}</p>
             </div>
 
@@ -50,7 +51,6 @@ function fetch_episodes() {
 
             <div class="collapse my-3" id="flush-${episode.episode_id}">
               <div class="card card-body text-white">
-                <p class="card-text">Temporada: ${episode.season}</p>
                 <p class="card-text">Fecha de emisión:<br>${episode.air_date}</p>
                 <p class="card-text">Personajes Principales:<br> "${episode.characters}"</p>
               </div>
