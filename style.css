@@ -60,6 +60,9 @@ footer {
 .bkw-Logo {
     width: 50px;
 }
+.responsive-text{
+	font-size: calc(10% + 1vw + 1vh);
+}
 
 /* Color de links */
 .nav-link {
@@ -101,10 +104,12 @@ footer {
 }
 
 /* Botones cambio de colores a la paleta de BK*/
+.btn-succes,
 .btn-primary{
     border: none;
     background-color: #29773E;
   }
+.btn-succes,
 .btn-primary:hover{
     background-color: #1F6032;
 }
