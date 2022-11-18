@@ -4,6 +4,9 @@ body {
     background-color: #032202;
     font-family: 'Hind Siliguri', sans-serif;
 }
+hr{
+    color: white;
+}
 @font-face {
     font-family: 'Heart Breaking Bad';
     font-style: normal;
