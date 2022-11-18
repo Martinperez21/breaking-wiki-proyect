@@ -2,9 +2,10 @@ const spinner = document.querySelector("#spinner");
 const pre = document.getElementById("prev");
 const next = document.getElementById("next");
 
-/* 
-Intento de utilizar limit, offset como en personajes, no funciono
-let limit = 8 
+/* Intento de utilizar limit, offset como en personajes, 
+no funciono ya que la api no cuenta con esta funcion en su link base */
+
+/* let limit = 8 
 let offset = 0
 
 next.addEventListener("click", () => {
@@ -17,8 +18,9 @@ pre.addEventListener("click", () =>  {
        limit -= 8
        fetch_episodes(limit, offset)
    } 
-});
- */
+}); */
+
+
 function fetch_episodes() {
     fetch(`https://www.breakingbadapi.com/api/episodes?series=Breaking+Bad`)
       .then(function(res){
@@ -53,13 +55,10 @@ function fetch_episodes() {
                 <p class="card-text">Personajes Principales:<br> "${episode.characters}"</p>
               </div>
             </div>  
-
-          
         </div>
           `;
         });
         document.getElementById('output').innerHTML = output; 
-  
       })
       .catch(function(error){
         console.log(error);

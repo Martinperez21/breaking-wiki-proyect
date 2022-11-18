@@ -4,9 +4,6 @@ body {
     background-color: #032202;
     font-family: 'Hind Siliguri', sans-serif;
 }
-footer{
-    background-color: rgb(10, 10, 10);
-}
 @font-face {
     font-family: 'Heart Breaking Bad';
     font-style: normal;
@@ -14,6 +11,11 @@ footer{
     src: local('Heart Breaking Bad'), url('https://fonts.cdnfonts.com/s/67301/Heart Breaking Bad.woff') format('woff');
 }
 
+/* Fonts */
+.font-bk {
+    font-family: 'Heart Breaking Bad', sans-serif;
+}
+/* Fondo en movimiento de index */
 .background-movement {
     background: linear-gradient(181deg, #032202, #0c210b, #023f00, #035600);
     background-size: 800% 800%;
@@ -22,7 +24,6 @@ footer{
     -o-animation: bk-background 11s ease infinite;
     animation: bk-background 11s ease infinite;
 }
-
 @-webkit-keyframes bk-background {
     0%{background-position:0% 58%}
     50%{background-position:100% 43%}
@@ -39,46 +40,36 @@ footer{
     100%{background-position:0% 58%}
 }
 
-.image-bk {
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.542), rgba(0, 0, 0, 0.568)), url(public/img/BK-image.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-}
-
-/* NAVBAR */
+/* COLOR PRINCIPAL */
 .navbar-dark,
 .bg-dark,
 .btn-dark,
 .card-body,
-.card-footer {
+.card-footer,
+footer {
     background-color: rgb(10, 10, 10);
 }
 
-.bkw-Logo {
-    width: 50px;
-}
 
-.font-bk {
-    font-family: 'Heart Breaking Bad', sans-serif;
-}
-
+/* Tamaños */
 .navbar-brand {
     font-size: 30px;
     font-family: 'Heart Breaking Bad', sans-serif;
 }
+.bkw-Logo {
+    width: 50px;
+}
 
+/* Color de links */
 .nav-link {
     color: rgb(41, 119, 62);
 }
-
 .nav-link:hover {
     color: white;
 }
 
-
+/* Imagenes de tarjeta responsive */
 .img-size {
     height: 250px;
     object-fit: cover;
@@ -91,30 +82,31 @@ footer{
     object-position: 0% 0%;
 }
 
+/* Efecto de tarjetas */
 .card {
     transition: all 0.2s ease;
 }
-
 .card:hover {
     transition: 90ms;
     transform: scale(1.05);
     box-shadow: rgba(43, 102, 58, 0.525) 0px 0px 60px;
 }
 
+/* Botones de pagina */
 .page-link {
     border: none;
     color: white;
     background-color: rgb(27, 81, 41);
 }
-
 .page-link:hover,
 .page.item:hover,
 pagination:hover {
-
     border: none;
     color: rgb(41, 119, 62);
     background-color: rgb(10, 10, 10);
 }
+
+/* Barra de progreso */
 .progress-bar{
     border: none;
     background-color: #00b209;

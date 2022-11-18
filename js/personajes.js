@@ -18,6 +18,9 @@ pre.addEventListener("click", () =>  {
        fetch_characters(limit, offset)
    } 
 });
+
+/* Funcion para desactivar botones al llegar a la 
+cantidad minima o maxima de personajes mostrados en pantalla */
 function disabled(){
   if(limit == 8){
     pre.disabled = true;
@@ -25,13 +28,15 @@ function disabled(){
   else{
     pre.disabled = false;
   }
-  if(limit == 8){
-    pre.disabled = true;
+
+  if(limit == 64){
+    next.disabled = true;
   }
   else{
-    pre.disabled = false;
+    next.disabled = false;
   }
 }
+
 function fetch_characters() {
   fetch(`https://www.breakingbadapi.com/api/characters?limit=${limit}&offset=${offset}`)
     .then(function(res){
