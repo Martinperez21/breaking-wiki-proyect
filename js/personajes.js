@@ -58,7 +58,7 @@ function fetch_characters() {
             </div>
 
             <div class="card-footer">
-              <button class="btn btn-success" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-${character.char_id}" aria-expanded="false" aria-controls="collapseExample">
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-${character.char_id}" aria-expanded="false" aria-controls="collapseExample">
                 Informacion
               </button>
               </div>

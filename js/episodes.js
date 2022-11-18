@@ -43,7 +43,7 @@ function fetch_episodes() {
             </div>
 
             <div class="card-footer">
-              <button class="btn btn-success" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-${episode.episode_id}" aria-expanded="false" aria-controls="collapseExample">
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-${episode.episode_id}" aria-expanded="false" aria-controls="collapseExample">
                 Informacion
               </button>
             </div>
